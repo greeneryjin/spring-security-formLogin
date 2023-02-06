@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자 회원가입 페이지</title>
+</head>
+<body>
+<h1>관리자 회원가입 페이지</h1>
+<hr/>
+<form th:action="@{/}" th:object="{AccountApiRequest}">
+    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+    <div class="form-floating">
+        <label th:for="userId">아이디 </label>
+        <input type="아이디" th:filed="*{userId}" class="form-control" placeholder="아이디를 입력하세요">
+
+    </div>
+    <div class="form-floating">
+        <label th:for="password">비밀번호</label>
+        <input type="password" th:filed="*{password}" class="form-control" placeholder="비밀번호를 입력하세요">
+    </div>
+
+    <div class="form-floating">
+        <label th:for="gender">성별</label>
+        <input type="gender" th:filed="*{gender}" class="form-control" placeholder="성별을 입력하세요">
+    </div>
+
+    <div class="form-floating">
+        <label th:for="nickName">닉네임</label>
+        <input type="nickName" th:filed="*{nickName}" class="form-control" placeholder="닉네임을 입력하세요">
+    </div>
+
+    <div class="form-floating">
+        <label th:for="adAgree">광고 동의</label>
+        <input type="adAgree" th:filed="*{adAgree}" class="form-control" placeholder="광고 동의하시나요">
+    </div>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">회원가입</button>
+</form>
+</div>
+</body>
+</html>
