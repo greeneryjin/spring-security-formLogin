@@ -10,8 +10,7 @@
 ```
 - springboot
 - Mysql
-- spring data jpa
-- spring jpa
+- jpa
 ```
 
 라이브러리
